@@ -3,8 +3,8 @@ CREATE TABLE Region
   Id INT NOT NULL,
   Name NVARCHAR(50) NOT NULL,
   Population INT NOT NULL,
-  PositionX DECIMAL(9, 6) NOT NULL,
-  PositionY DECIMAL(9, 6) NOT NULL,
+  PositionX NUMERIC(9, 6) NOT NULL,
+  PositionY NUMERIC(9, 6) NOT NULL,
   PRIMARY KEY (Id)
 )
 GO
@@ -12,11 +12,10 @@ GO
 CREATE TABLE Location
 (
   Id INT NOT NULL,
-  PositionX DECIMAL(9, 6) NOT NULL,
-  PositionY DECIMAL(9, 6) NOT NULL,
+  PositionX NUMERIC(9, 6) NOT NULL,
+  PositionY NUMERIC(9, 6) NOT NULL,
   RegionId INT NOT NULL,
-  PRIMARY KEY (Id),
-  FOREIGN KEY (RegionId) REFERENCES Region(Id)
+  PRIMARY KEY (Id)
 )
 GO
 
@@ -28,8 +27,7 @@ CREATE TABLE Antenna
   Capacity INT NOT NULL,
   MaxTraffic INT NOT NULL,
   LocationId INT NOT NULL,
-  PRIMARY KEY (Id),
-  FOREIGN KEY (LocationId) REFERENCES Location(Id)
+  PRIMARY KEY (Id)
 )
 GO
 
@@ -38,21 +36,19 @@ CREATE TABLE CustomerType
   Id INT NOT NULL,
   Name NVARCHAR(10) NOT NULL,
   Description NVARCHAR(50) NOT NULL,
-  PRIMARY KEY (Id),
-  UNIQUE (Name)
+  PRIMARY KEY (Id)
 )
 GO
 
 CREATE TABLE AntennaCoverage
 (
+  Id INT NOT NULL,
+  Date DATETIME NOT NULL,
   Capacity INT NOT NULL,
   MaxTraffic INT NOT NULL,
-  Id INT NOT NULL,
   AntennaId INT NOT NULL,
   RegionId INT NOT NULL,
-  PRIMARY KEY (Id),
-  FOREIGN KEY (AntennaId) REFERENCES Antenna(Id),
-  FOREIGN KEY (RegionId) REFERENCES Region(Id)
+  PRIMARY KEY (Id)
 )
 GO
 
@@ -64,9 +60,7 @@ CREATE TABLE Customer
   Email NVARCHAR(100) NOT NULL,
   LocationId INT NOT NULL,
   CustomerTypeId INT NOT NULL,
-  PRIMARY KEY (Id),
-  FOREIGN KEY (LocationId) REFERENCES Location(Id),
-  FOREIGN KEY (CustomerTypeId) REFERENCES CustomerType(Id)
+  PRIMARY KEY (Id)
 )
 GO
 
@@ -78,8 +72,6 @@ CREATE TABLE Activity
   ActivityDate DATETIME NOT NULL,
   AntennaId INT NOT NULL,
   CustomerId INT NOT NULL,
-  PRIMARY KEY (Id),
-  FOREIGN KEY (AntennaId) REFERENCES Antenna(Id),
-  FOREIGN KEY (CustomerId) REFERENCES Customer(Id)
+  PRIMARY KEY (Id)
 )
 GO
