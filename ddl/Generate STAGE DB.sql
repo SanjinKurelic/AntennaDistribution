@@ -45,9 +45,10 @@ GO
 
 CREATE TABLE AntennaCoverage
 (
+  Id INT NOT NULL,
+  Date DATETIME NOT NULL,
   Capacity INT NOT NULL,
   MaxTraffic INT NOT NULL,
-  Id INT NOT NULL,
   AntennaId INT NOT NULL,
   RegionId INT NOT NULL,
   PRIMARY KEY (Id),
