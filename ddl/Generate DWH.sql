@@ -188,7 +188,7 @@ BEGIN
 	SET @sql = N'set identity_insert ' + @dwh_db_name + N'.dbo.d_date on' + CHAR(10) + CHAR(13) +
 	N'insert into ' + @dwh_db_name + N'.dbo.d_date
 		(
-            [date_sid]
+            [d_date_sid]
            ,[date]
 		   ,[year]
            ,[quarter]
@@ -215,8 +215,8 @@ END
 
 -- Call procedures
 
-EXEC [dbo].[sp_insert_unknown_member] -- insert_unknown_member
+EXEC [dbo].[sp_fill_d_date] -- d_table
 GO
 
-EXEC [dbo].[sp_fill_d_date] -- d_table
+EXEC [dbo].[sp_insert_unknown_member] -- insert_unknown_member
 GO
