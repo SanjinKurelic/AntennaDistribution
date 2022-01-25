@@ -1,4 +1,4 @@
-cus_id,cus_name,cus_phone,cus_email,type_id,type_name,type_desc,loc_id,loc_x,loc_x,region_name
+cus_id,cus_name,cus_phone,cus_email,type_id,type_name,type_desc,loc_id,loc_x,loc_y,region_name
 1,Chef's Winds Eatery,+999175778519,chefswindseatery@example.com,2,COMPANY,Some description for company type,1,13.01,45.27,Omišalj
 2,The Street Lodge,+999547503827,thestreetlodge@example.com,2,COMPANY,Some description for company type,2,12.99,45.28,Omišalj
 3,Perfect Pineapple Tavern,+999861903341,perfectpineappletavern@example.com,2,COMPANY,Some description for company type,3,12.94,45.13,Malinska
