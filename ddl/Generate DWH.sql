@@ -1,6 +1,6 @@
 CREATE TABLE d_date
 (
-  date_sid INT IDENTITY(1,1) NOT NULL,
+  d_date_sid INT IDENTITY(1,1) NOT NULL,
   date DATETIME NOT NULL,
   year INT NOT NULL,
   quarter INT NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE d_date
   day INT NOT NULL,
   workday INT NOT NULL,
   weekend INT NOT NULL,
-  PRIMARY KEY (date_sid)
+  PRIMARY KEY (d_date_sid)
 )
 GO
 
@@ -64,6 +64,22 @@ CREATE TABLE d_region
 )
 GO
 
+CREATE TABLE f_antenna_coverage
+(
+  f_antenna_coverage_sid INT NOT NULL,
+  coverage_id INT NOT NULL,
+  coverage_capacity INT NOT NULL,
+  coverage_traffic INT NOT NULL,
+  date_sid INT NOT NULL,
+  antenna_sid INT NOT NULL,
+  region_sid INT NOT NULL,
+  PRIMARY KEY (f_antenna_coverage_sid),
+  FOREIGN KEY (date_sid) REFERENCES d_date(d_date_sid),
+  FOREIGN KEY (antenna_sid) REFERENCES d_antenna(d_antenna_sid),
+  FOREIGN KEY (region_sid) REFERENCES d_region(d_region_sid)
+)
+GO
+
 CREATE TABLE f_customer_activity
 (
   f_customer_activity_sid INT NOT NULL,
@@ -80,7 +96,7 @@ CREATE TABLE f_customer_activity
   FOREIGN KEY (customer_sid) REFERENCES d_customer(d_customer_sid),
   FOREIGN KEY (antenna_sid) REFERENCES d_antenna(d_antenna_sid),
   FOREIGN KEY (region_sid) REFERENCES d_region(d_region_sid),
-  FOREIGN KEY (activity_date_sid) REFERENCES d_date(date_sid)
+  FOREIGN KEY (activity_date_sid) REFERENCES d_date(d_date_sid)
 )
 GO
 
