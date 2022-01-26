@@ -1,0 +1,177 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ae9092bc-51be-4c78-8176-fed70aa649b1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>d Region</ID>
+  <Name>d Region</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="fb1c5c8b-e2e0-4852-a5f8-661ac591c7b4">
+    <DataSourceViewID>Antenna Distribution DWH</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="88e77518-f04c-4868-88d7-52155440eb0a">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="cbc47a9e-d463-4c3e-97e0-2c5ccba1cd74">
+      <ID>d Region Sid</ID>
+      <Name>d Region Sid</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="830f7229-9d80-405d-bdd0-1a78a6402586">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09a02362-9603-446f-8913-ae2234d1abbf">
+            <TableID>dbo_d_region</TableID>
+            <ColumnID>d_region_sid</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="6e82618f-915c-40b7-9ec2-88105c7caa94">
+          <AttributeID>Region Id</AttributeID>
+          <Name>Region Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="825abf51-8e62-45f7-8ae1-bfafe776a454">
+          <AttributeID>Region Name</AttributeID>
+          <Name>Region Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1292e888-cc4e-4810-aae7-b47456fa84fa">
+          <AttributeID>Region Population</AttributeID>
+          <Name>Region Population</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ac65a5ed-bd24-4d85-b4dd-c27f15a749af">
+          <AttributeID>Region X</AttributeID>
+          <Name>Region X</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f8a24989-1e4f-4144-8ce1-3c2d658b06c8">
+          <AttributeID>Region Y</AttributeID>
+          <Name>Region Y</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7a643543-262a-4e26-92b3-126cf0350deb">
+      <ID>Region Id</ID>
+      <Name>Region Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="39e43af3-e73a-4cd6-9122-0083521eb63e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ca5a7af4-a72c-4916-ae11-9f0b54d639bb">
+            <TableID>dbo_d_region</TableID>
+            <ColumnID>region_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3ffd9911-222b-40d7-bd5b-e7a9630e7a14">
+      <ID>Region Name</ID>
+      <Name>Region Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0c5d54a7-28d6-4bdc-81cc-9c07a5dffbbf">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7aa230c4-7a82-4f4d-b1bc-fbaf3724a639">
+            <TableID>dbo_d_region</TableID>
+            <ColumnID>region_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ba8ca686-bf2e-4d84-ad9b-f3f8931761fa">
+      <ID>Region Population</ID>
+      <Name>Region Population</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4eb3eef4-0166-4466-afca-4669f5cb0f2b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c3e8946-ef72-4d7a-be28-7cc8f673324f">
+            <TableID>dbo_d_region</TableID>
+            <ColumnID>region_population</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eb2db960-0389-4fb8-8e70-837b42a5e5fc">
+      <ID>Region X</ID>
+      <Name>Region X</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c8cd55d3-b2f4-4f2f-bc97-1fe144e3c655">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="439ec504-947b-4312-a193-0ccbcce7efc6">
+            <TableID>dbo_d_region</TableID>
+            <ColumnID>region_x</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3002938c-2c6e-4d2c-8476-f84dff8439d2">
+      <ID>Region Y</ID>
+      <Name>Region Y</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="41a0b92c-3b0b-4fca-aeeb-40c18f3b7d5f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="599d23a6-a6f7-4f3e-94b7-bc57a58f6d19">
+            <TableID>dbo_d_region</TableID>
+            <ColumnID>region_y</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

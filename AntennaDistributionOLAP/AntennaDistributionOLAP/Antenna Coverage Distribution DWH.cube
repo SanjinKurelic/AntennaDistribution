@@ -1,0 +1,265 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0bdb3819-c591-4726-b016-6571b577f449" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Antenna Coverage Distribution DWH</ID>
+  <Name>Antenna Coverage Distribution DWH</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="1d0e358e-e7a8-450f-80a9-c2c2d926d72f">
+      <ID>d Region</ID>
+      <Name>d Region</Name>
+      <DimensionID>d Region</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9742cfdc-f161-4c48-be21-d8ad0d1220cf">
+          <AttributeID>d Region Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9a1113b4-0a15-4186-ba27-346c105dd293">
+          <AttributeID>Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e93e8df-0d4c-4fda-b744-df082af92416">
+          <AttributeID>Region Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b1b52eb5-b86a-44b9-af36-e90b4c504e89">
+          <AttributeID>Region Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26423ffa-7c1d-4cf3-90b5-05969ad62b66">
+          <AttributeID>Region X</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="328cc627-36a7-4379-a7f0-ed61b8fbe1bc">
+          <AttributeID>Region Y</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6f44cf63-b9f6-4837-aba0-1ed4e4e2b8ba">
+      <ID>d Date</ID>
+      <Name>d Date</Name>
+      <DimensionID>d Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9381cff0-3347-47c6-b4e2-2e61b5aa0a0b">
+          <AttributeID>d Date Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="490dad0a-23ad-4cdc-a151-4f140add3d1d">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3466a003-8f32-4bb4-9efb-a31aac7724fc">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6c2c2f98-9fb4-423f-9fee-98681edb4689">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8b75e0f2-cc34-4098-b495-7489b0a0e792">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb106e4a-60f1-4b14-99d1-c220365650eb">
+          <AttributeID>Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d14502f-9a00-463c-840f-c11d9a3e2727">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5bf2499-b1fa-48e9-a709-451dca7fc3c6">
+          <AttributeID>Workday</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e2b9e369-9bb2-4044-a902-9e4da176b2ca">
+          <AttributeID>Weekend</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d68163aa-b16d-4f02-9c6b-b5708b7832fb">
+      <ID>d Antenna</ID>
+      <Name>d Antenna</Name>
+      <DimensionID>d Antenna</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="22435c98-615f-4b77-876e-f33dc1dc7eff">
+          <AttributeID>d Antenna Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="43ba4583-2f25-4b3e-bea8-1f972ca56d6e">
+          <AttributeID>Antenna Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ac7d6681-b745-48c5-94b4-5a44036092e3">
+          <AttributeID>Antenna Radius</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ef6be5b-07ee-4bb4-8e62-f5b77ff7a520">
+          <AttributeID>Antenna Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eeb1825a-0d8e-4cae-9139-671de12720fe">
+          <AttributeID>Antenna Capacity</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f5a6d54-95d7-4003-8fed-17cf708b97ec">
+          <AttributeID>Antenna Traffic</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b4704d6-7b6b-46c8-b217-33ea52ac44ea">
+          <AttributeID>Antenna Location X</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="498310a1-73aa-4628-b036-7a71eda0b9fb">
+          <AttributeID>Antenna Location Y</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2ff4db08-122c-40e7-8cb2-c182fb759ee6">
+          <AttributeID>Antenna Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cdac06a6-1aa5-4a45-a200-c310e6b96097">
+          <AttributeID>Date From</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a26f823-0b99-4819-b57d-084fa8496880">
+          <AttributeID>Date To</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="1bb88bc4-753e-471d-8710-243090d605ef">
+      <ID>f Antenna Coverage</ID>
+      <Name>f Antenna Coverage</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="316ca0b6-695f-4c7a-8227-538820b76b7f">
+          <ID>Coverage Id</ID>
+          <Name>Coverage Id</Name>
+          <Source dwd:design-time-name="cb68ddfe-fb4e-4c58-9f8a-6c68f82a2ace">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="042e1e3d-3958-4e23-b73c-29f2b65052c4">
+              <TableID>dbo_f_antenna_coverage</TableID>
+              <ColumnID>coverage_id</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="747b357f-edf8-4959-a8fa-14f15beda0b0">
+          <ID>Coverage Capacity</ID>
+          <Name>Coverage Capacity</Name>
+          <Source dwd:design-time-name="f205361f-8854-4446-93fa-b17cf5cef851">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ff7ddf22-e1bc-406f-b70a-dc5465ca4d80">
+              <TableID>dbo_f_antenna_coverage</TableID>
+              <ColumnID>coverage_capacity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="10413225-600f-4872-93b8-c351aa97cb5b">
+          <ID>Coverage Traffic</ID>
+          <Name>Coverage Traffic</Name>
+          <Source dwd:design-time-name="91f3a4aa-9e33-4c69-a1d1-75bad4a76015">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="62606f7d-3c72-4857-9387-e68c7b294b91">
+              <TableID>dbo_f_antenna_coverage</TableID>
+              <ColumnID>coverage_traffic</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="45ccf145-c3aa-463d-ba16-1ee9a02cc953">
+          <ID>f Antenna Coverage Count</ID>
+          <Name>f Antenna Coverage Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2289b11e-e6b8-4097-a2db-3b91b338294e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="1abd917c-4d1d-4356-8b6f-d3056ef5d8a1">
+              <TableID>dbo_f_antenna_coverage</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6fa3de2a-7393-4c8d-90d5-1ef07fbe9c7d">
+          <CubeDimensionID>d Region</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a8ab8140-c1a3-4f11-bdc3-058b51a0d23c">
+              <AttributeID>d Region Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="00f2ed07-d561-4c6d-992a-a51c1a1b79d1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cb10d233-5e77-4bd8-9703-911111afbbf3">
+                    <TableID>dbo_f_antenna_coverage</TableID>
+                    <ColumnID>region_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d9e50c13-85a7-4426-aa4f-cf5b3594ba60">
+          <CubeDimensionID>d Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e769bb34-af23-46e5-9a97-d804214cfefa">
+              <AttributeID>d Date Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="431bd128-65b0-407b-b303-9d0e7463fb97">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3bf180cb-2ae5-4a16-bddc-3ee0216f26fb">
+                    <TableID>dbo_f_antenna_coverage</TableID>
+                    <ColumnID>date_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e365c896-1330-47fd-8db0-24fb4d6da30b">
+          <CubeDimensionID>d Antenna</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="81ac111a-4aae-4c12-a579-eaba61fb67b8">
+              <AttributeID>d Antenna Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="096769ba-6797-4fe1-9e10-694e4e419bd0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cce149a3-b2a6-4931-89da-2ddf31ecc392">
+                    <TableID>dbo_f_antenna_coverage</TableID>
+                    <ColumnID>antenna_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="015733df-5169-4e33-a309-fa21e94518fd">
+    <DataSourceViewID>Antenna Distribution DWH</DataSourceViewID>
+  </Source>
+</Cube>

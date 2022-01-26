@@ -1,0 +1,277 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7aaec6f2-1eb2-471e-be48-599c1a302f22" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>d Antenna</ID>
+  <Name>d Antenna</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9015ddde-d681-4501-9723-825844edcf9c">
+    <DataSourceViewID>Antenna Distribution DWH</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="74fb99e3-1b2c-4b95-b082-90fefc291f50">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="2298471d-797c-4236-885f-aac35359039a">
+      <ID>d Antenna Sid</ID>
+      <Name>d Antenna Sid</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dae98244-d0e0-4f22-91cc-03060c65e347">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e63cfd4e-1746-47e3-9aeb-d447ac8e897c">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>d_antenna_sid</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4ebc9b29-3352-4aad-b9d3-53570ea55625">
+          <AttributeID>Antenna Id</AttributeID>
+          <Name>Antenna Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c046aec7-3857-415b-93b2-c7a871e37d75">
+          <AttributeID>Antenna Radius</AttributeID>
+          <Name>Antenna Radius</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f9ccd3ac-ce4f-49d2-99c7-d2e6d1c37bc9">
+          <AttributeID>Antenna Name</AttributeID>
+          <Name>Antenna Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f6840549-b4c5-4f3d-af6c-6d183bfa99e8">
+          <AttributeID>Antenna Capacity</AttributeID>
+          <Name>Antenna Capacity</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7bdf1b58-5a6d-4644-86fd-c93e6c47b612">
+          <AttributeID>Antenna Traffic</AttributeID>
+          <Name>Antenna Traffic</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2a2031b4-c223-4c34-90f1-5dd80a8b4e7f">
+          <AttributeID>Antenna Location X</AttributeID>
+          <Name>Antenna Location X</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f8c2f470-4908-46e5-bb77-db3f27529a3f">
+          <AttributeID>Antenna Location Y</AttributeID>
+          <Name>Antenna Location Y</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1cfd8bca-09b1-4eca-9040-3ed08d5bc3c0">
+          <AttributeID>Antenna Region Id</AttributeID>
+          <Name>Antenna Region Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2d010008-d36a-4b99-b809-02bf220fb47d">
+          <AttributeID>Date From</AttributeID>
+          <Name>Date From</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d8db3ce3-b8cd-4769-829c-36acf2902f40">
+          <AttributeID>Date To</AttributeID>
+          <Name>Date To</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c51b7788-d039-440c-b3c5-b1aacc3e97d6">
+      <ID>Antenna Id</ID>
+      <Name>Antenna Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="00436552-1f33-4833-b6de-58e03e66ed9e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="237e2f43-ba10-4d80-8527-7a0030b52325">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1a7e98d3-2f25-4b23-8b66-ace7ea94cc2e">
+      <ID>Antenna Radius</ID>
+      <Name>Antenna Radius</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="414f5448-fc25-496d-b7a6-0f66ebef9106">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="15d3d650-8f92-424b-891d-f077f236fa50">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_radius</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8d8bd17f-a4c7-4b9b-b2de-6cd297392aa8">
+      <ID>Antenna Name</ID>
+      <Name>Antenna Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1c17b070-b208-4ed9-adcd-07116c8430af">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5ca3d2fd-b7d1-4997-9a42-4abd29adca26">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e8a94842-8cac-4f06-85b7-7aee281645cb">
+      <ID>Antenna Capacity</ID>
+      <Name>Antenna Capacity</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b81f755c-b069-4272-9d9d-35e9928af980">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="58d402ef-0888-4956-9f54-85bc06f52f18">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_capacity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="042a5aa0-643f-4214-9eb6-864cce35a517">
+      <ID>Antenna Traffic</ID>
+      <Name>Antenna Traffic</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c39af107-69ff-43bc-9d61-51df8ba481fa">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6edfd5e9-5482-45df-b915-1772f9f1ff32">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_traffic</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bae405c8-4917-4f74-afa5-fe17e14b639d">
+      <ID>Antenna Location X</ID>
+      <Name>Antenna Location X</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eb377245-16ef-45c9-82bc-ff2f87e8607a">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7d9f119c-4476-414f-8829-8fab0cad35bd">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_location_x</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c092f5a6-f212-4659-a9cf-8316c6a3f241">
+      <ID>Antenna Location Y</ID>
+      <Name>Antenna Location Y</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8dbc0651-e456-4b65-9a25-28ea95342945">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="35dbe824-ed96-40bb-852c-5a0c68a46a37">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_location_y</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="124683b6-7826-4100-83bb-22c0f47c821f">
+      <ID>Antenna Region Id</ID>
+      <Name>Antenna Region Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7355d753-55fe-4b90-a2f1-348bd4b646e7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24af88ff-b6c9-421f-a6c2-0fdbab046e43">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>antenna_region_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b41639a7-c3aa-4ea0-9d6f-3617ca5b07e8">
+      <ID>Date From</ID>
+      <Name>Date From</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5a685349-afc7-4ec7-bf8d-1f78ea9da9d4">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7540b818-2c13-4e39-b744-9e45cc52a358">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>date_from</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c8993dde-78fd-4a74-8d31-6d520c66a3ee">
+      <ID>Date To</ID>
+      <Name>Date To</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="034d84dd-1258-4dbb-ba06-26253ed99d64">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="744b1337-2e6e-4e76-80f9-3f26903b0140">
+            <TableID>dbo_d_antenna</TableID>
+            <ColumnID>date_to</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

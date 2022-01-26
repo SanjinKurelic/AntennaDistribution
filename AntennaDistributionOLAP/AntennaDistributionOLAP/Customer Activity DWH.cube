@@ -1,0 +1,360 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fab0d711-5f10-4182-91bc-14f7b930b7f4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Customer Activity DWH</ID>
+  <Name>Customer Activity DWH</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="215bf352-16fe-475b-a2ff-03339c7105c1">
+      <ID>d Customer Type</ID>
+      <Name>d Customer Type</Name>
+      <DimensionID>d Customer Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f48d9daf-b57a-4af7-b13a-c1dff1dfe049">
+          <AttributeID>d Customer Type Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19ad5d3c-6a44-4c9a-b0c2-899c1e57dbf3">
+          <AttributeID>Customer Type Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d291e02a-7b5a-4bd0-a1d4-ee4aaaca1839">
+          <AttributeID>Customer Type Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6bf12904-553f-490b-80d8-cf1ce20e6267">
+          <AttributeID>Customer Type Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7b2eacdd-bca8-4805-b94b-f5792749c712">
+      <ID>d Date</ID>
+      <Name>d Date</Name>
+      <DimensionID>d Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9c4cc95f-61c2-4307-a447-e7bc462a26ab">
+          <AttributeID>d Date Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b3a1b984-4ac2-43ad-8084-38dbf2d329f8">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb7a9c6e-e1bb-47bf-be7d-c4384839d199">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1b376dde-8d36-4975-9b6e-40419a585e35">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="70bbe1c3-a253-4fcd-b0d3-99549fed7a22">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="33ee9764-8360-467c-b266-38501ccfbdc9">
+          <AttributeID>Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bcffaf60-5fa7-44ab-959e-a3af1fd1d7fb">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="21227877-bf23-4f44-9139-303dd0cdf24f">
+          <AttributeID>Workday</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64724ef2-5b09-4b30-9b74-854d7564c6a6">
+          <AttributeID>Weekend</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="325d8b6c-996b-4e32-ba84-05505856b363">
+      <ID>d Region</ID>
+      <Name>d Region</Name>
+      <DimensionID>d Region</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7f2b9326-5e50-428f-815c-25234e2586b0">
+          <AttributeID>d Region Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c54bde11-571f-497b-b3a2-ba3c3500f879">
+          <AttributeID>Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d8acd276-e3cf-414b-bef1-efc9c2c0e37b">
+          <AttributeID>Region Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35b56a4d-9a71-4984-a9fd-08b20a13c113">
+          <AttributeID>Region Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="002abcf1-2d9a-43df-aa75-7fba1ccfdd9f">
+          <AttributeID>Region X</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8f57193a-09b8-402e-ae80-ab75b73402cc">
+          <AttributeID>Region Y</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="76d335f1-9e7b-4c04-89e5-ea548d799ebc">
+      <ID>d Antenna</ID>
+      <Name>d Antenna</Name>
+      <DimensionID>d Antenna</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5e45e612-0c71-470a-b31e-4fa8c6a48a74">
+          <AttributeID>d Antenna Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b1a2476f-a82c-4de4-9ec5-5e1f854891b6">
+          <AttributeID>Antenna Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="702b8ca7-89a4-4ecf-9cf2-8546521e3c1d">
+          <AttributeID>Antenna Radius</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="174a6b70-e72a-4f59-b892-a49f54533cf0">
+          <AttributeID>Antenna Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a273e64-9428-435e-a7d7-e9b12a5d2e5f">
+          <AttributeID>Antenna Capacity</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35f42fe1-c083-4788-b76a-da0b5fa3f2e4">
+          <AttributeID>Antenna Traffic</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f9e52286-37cc-4665-8cb1-9c5dd09f42f6">
+          <AttributeID>Antenna Location X</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e100a0bc-c1c7-4c13-8d58-9db1eae55319">
+          <AttributeID>Antenna Location Y</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="208a819b-f510-4ebd-adcb-4970158a1423">
+          <AttributeID>Antenna Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d6cbb1e-e2ef-4d79-bd91-c08abc779f5c">
+          <AttributeID>Date From</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e34c19c8-a65d-40fd-ba32-4217c534b740">
+          <AttributeID>Date To</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ed2e43d1-e23a-4734-8c99-74ed41d08d5b">
+      <ID>d Customer</ID>
+      <Name>d Customer</Name>
+      <DimensionID>d Customer</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="df1af98d-a7bb-46c5-92eb-9aa9b2d2e0d5">
+          <AttributeID>d Customer Sid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="97006261-c98f-47f1-a4dc-316caede7bb9">
+          <AttributeID>Customer Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a7900b17-be59-4418-93c5-83a89376294c">
+          <AttributeID>Customer Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5986b4e3-4532-47bb-86e2-623c446ef6cc">
+          <AttributeID>Customer Phone</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3950d11-b8fa-4fca-8e15-dbc2fcb10bdf">
+          <AttributeID>Customer Email</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e13c36b3-f28d-4553-821f-af171699fa65">
+          <AttributeID>Customer Location Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5a1af6d-ab25-4849-a1c0-d32fef70e7fe">
+          <AttributeID>Customer Location X</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07f9bc70-a1cc-42bf-af6e-84b05764220f">
+          <AttributeID>Customer Location Y</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e45b0fc6-ac3b-426a-88da-21154a9a5f1f">
+          <AttributeID>Customer Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e9b9370-8eea-42f6-a38b-0a4acfed48d3">
+          <AttributeID>Date From</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c48c1eef-e195-4662-8ddf-f082a84bd66b">
+          <AttributeID>Date To</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="d19e2fe3-9cd6-4aea-8617-13846b8e0f11">
+      <ID>f Customer Activity</ID>
+      <Name>f Customer Activity</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2320cece-1a09-4068-915d-53ead081f8a2">
+          <ID>Activity Id</ID>
+          <Name>Activity Id</Name>
+          <Source dwd:design-time-name="0b06d59f-1f2e-4aae-9b09-d141545afacb">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f96e7691-0030-4190-b3bf-11072455a943">
+              <TableID>dbo_f_customer_activity</TableID>
+              <ColumnID>activity_id</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a372751c-e355-4969-a54c-b194065b95a2">
+          <ID>Activity Traffic</ID>
+          <Name>Activity Traffic</Name>
+          <Source dwd:design-time-name="d0a3a091-ebae-45bf-b185-ea537a80b565">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c6fa103d-4c06-47cc-a267-15beb59c85e1">
+              <TableID>dbo_f_customer_activity</TableID>
+              <ColumnID>activity_traffic</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="df7542e9-f344-4d98-9a3b-086eb7e552af">
+          <ID>Activity Speed</ID>
+          <Name>Activity Speed</Name>
+          <Source dwd:design-time-name="9bc9d78d-29a0-421e-8e6e-4eeaa1f7d3d2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d54c612a-7888-4e01-8c3a-b14e958a4c1b">
+              <TableID>dbo_f_customer_activity</TableID>
+              <ColumnID>activity_speed</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e3011d87-2dd2-4d92-8b39-aab4d75cacde">
+          <ID>f Customer Activity Count</ID>
+          <Name>f Customer Activity Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="fea4bbf0-8481-4055-8993-63afcc2a33e5">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="4a79a2a2-f83a-496c-ae88-b7d421cf77f4">
+              <TableID>dbo_f_customer_activity</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0ad91a30-d4ca-4850-adc8-b11368e3805f">
+          <CubeDimensionID>d Customer Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="03020b1e-7a59-40f6-ac71-c9f3da5f2a99">
+              <AttributeID>d Customer Type Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="545b9c70-88be-4b65-a21f-021177ef2746">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="44642c12-1509-4ce2-9f7d-1f8d86652dcd">
+                    <TableID>dbo_f_customer_activity</TableID>
+                    <ColumnID>customer_type_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8545ceac-ad72-4d1b-a294-3167b05c6f1a">
+          <CubeDimensionID>d Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b5adf458-db3e-42eb-8593-e0bf20014e0b">
+              <AttributeID>d Date Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ce556417-be73-4863-9e9f-fdd6832a4704">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e5fcff3a-aba9-4bb5-891b-4d3efa12aee9">
+                    <TableID>dbo_f_customer_activity</TableID>
+                    <ColumnID>activity_date_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8f947f8a-22f9-4e89-abd5-1c38d7fbcc52">
+          <CubeDimensionID>d Region</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="54fa5c8f-3718-4e27-ae9f-711ebbce78f6">
+              <AttributeID>d Region Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b6d70c6a-911d-48ff-80fd-39e715cfa42d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2b207338-d081-418d-8b36-96c8e5a70842">
+                    <TableID>dbo_f_customer_activity</TableID>
+                    <ColumnID>region_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1b5acc82-6ac5-4d12-a658-580c4f361b8a">
+          <CubeDimensionID>d Antenna</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f6a8ba68-79fd-4080-b57d-b292b8a575a4">
+              <AttributeID>d Antenna Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bbbbdbce-507d-49c9-b677-d6640e1f8640">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d9d6d41b-cf5d-4439-b677-ef540c5fe7bb">
+                    <TableID>dbo_f_customer_activity</TableID>
+                    <ColumnID>antenna_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c0045222-9363-490c-a35d-4895df67f811">
+          <CubeDimensionID>d Customer</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="82698254-970a-447b-aee5-ac2a42655adf">
+              <AttributeID>d Customer Sid</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8c6cf1f9-53f9-4461-b6e1-8fca832526b1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="01ee9d86-ddf1-441c-a7d6-0fd6587b16a0">
+                    <TableID>dbo_f_customer_activity</TableID>
+                    <ColumnID>customer_sid</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="26500985-8b51-4c7f-baa0-9aa78c23af4a">
+    <DataSourceViewID>Antenna Distribution DWH</DataSourceViewID>
+  </Source>
+</Cube>
