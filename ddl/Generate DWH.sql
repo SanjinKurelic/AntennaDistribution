@@ -72,7 +72,7 @@ GO
 
 CREATE TABLE f_antenna_coverage
 (
-  f_antenna_coverage_sid INT NOT NULL,
+  f_antenna_coverage_sid INT IDENTITY(1,1) NOT NULL,
   coverage_id INT NOT NULL,
   coverage_capacity INT NOT NULL,
   coverage_traffic INT NOT NULL,
@@ -88,7 +88,7 @@ GO
 
 CREATE TABLE f_customer_activity
 (
-  f_customer_activity_sid INT NOT NULL,
+  f_customer_activity_sid INT IDENTITY(1,1) NOT NULL,
   activity_id INT NOT NULL,
   activity_traffic INT NOT NULL,
   activity_speed INT NOT NULL,
