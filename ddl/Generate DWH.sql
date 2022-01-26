@@ -16,13 +16,16 @@ GO
 CREATE TABLE d_customer
 (
   d_customer_sid INT IDENTITY(1,1) NOT NULL,
+  customer_id INT NOT NULL,
   customer_name NVARCHAR(100) NOT NULL,
   customer_phone NVARCHAR(15) NOT NULL,
   customer_email NVARCHAR(100) NOT NULL,
+  customer_location_id INT NOT NULL,
   customer_location_x DECIMAL(9, 6) NOT NULL,
   customer_location_y DECIMAL(9, 6) NOT NULL,
-  customer_location_id INT NOT NULL,
-  customer_id INT NOT NULL,
+  customer_region_id INT NOT NULL, 
+  date_from DATETIME NOT NULL,
+  date_to DATETIME,
   PRIMARY KEY (d_customer_sid)
 )
 GO
@@ -30,9 +33,9 @@ GO
 CREATE TABLE d_customer_type
 (
   d_customer_type_sid INT IDENTITY(1,1) NOT NULL,
+  customer_type_id INT NOT NULL,
   customer_type_name NVARCHAR(10) NOT NULL,
   customer_type_description NVARCHAR(50) NOT NULL,
-  customer_type_id INT NOT NULL,
   PRIMARY KEY (d_customer_type_sid)
 )
 GO
@@ -48,6 +51,9 @@ CREATE TABLE d_antenna
   antenna_location_id INT NOT NULL,
   antenna_location_x DECIMAL(9, 6) NOT NULL,
   antenna_location_y DECIMAL(9, 6) NOT NULL,
+  antenna_region_id INT NOT NULL,
+  date_from DATETIME NOT NULL,
+  date_to DATETIME,
   PRIMARY KEY (d_antenna_sid)
 )
 GO
@@ -220,3 +226,9 @@ GO
 
 EXEC [dbo].[sp_insert_unknown_member] -- insert_unknown_member
 GO
+
+-- Update historic records date_to attribute
+
+UPDATE [dbo].[d_antenna] SET date_to = NULL WHERE d_antenna_sid = -99
+
+UPDATE [dbo].[d_customer] SET date_to = NULL WHERE d_customer_sid = -99
